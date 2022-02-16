@@ -17,6 +17,10 @@ function calculation(number) {
             RentExpenses.value = "";
             ClothesExpenses.value = "";
             income.value = "";
+            savingAmount.innerText = 0;
+            remainingBalance.innerText = 0;
+
+
         }
         if (isNaN(parseFloat(FoodExpenses.value)) || isNaN(parseFloat(RentExpenses.value)) || isNaN(parseFloat(ClothesExpenses.value)) || isNaN(parseFloat(income.value))) {
             alert('Please do not enter any string');
@@ -43,8 +47,8 @@ function calculation(number) {
     //saving part
 
     if (number == false) {
-        if (parseFloat(savingRate.value) < 0 || isNaN(parseFloat(savingRate.value))) {
-            alert("not valid saving");
+        if (parseFloat(savingRate.value) < 0 || parseFloat(income.value) < 0 || isNaN(parseFloat(savingRate.value)) || isNaN(parseFloat(income.value))) {
+            alert("not valid");
         }
         else {
             const saving = (parseFloat(savingRate.value) / 100) * parseFloat(income.value);
