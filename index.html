@@ -31,7 +31,7 @@
                             <div class="col-6">
                                 <p class="text-end fs-5">Income :</p>
                             </div>
-                            <div class="col-6"><input class="input-background" type="text"></div>
+                            <div class="col-6"><input id="income" class="input-background" type="text"></div>
 
                         </div>
                         <h2 class="text-center my-3">Expenses</h2>
@@ -39,21 +39,21 @@
                             <div class="col-6">
                                 <p class="text-end fs-5">Food :</p>
                             </div>
-                            <div class="col-6"><input class="input-background" type="text"></div>
+                            <div class="col-6"><input id="Food-expenses" class="input-background" type="text"></div>
                             <div class="col-6">
                                 <p class="text-end fs-5">Rent :</p>
                             </div>
-                            <div class="col-6"><input class="input-background" type="text"></div>
+                            <div class="col-6"><input id="Rent-expenses" class="input-background" type="text"></div>
                             <div class="col-6">
                                 <p class="text-end fs-5">Clothes :</p>
                             </div>
-                            <div class="col-6"><input class="input-background" type="text"></div>
+                            <div class="col-6"><input id="Clothes-expenses" class="input-background" type="text"></div>
 
                         </div>
-                        <div class="text-center mt-5"><button
+                        <div class="text-center mt-5"><button id="Calculatebtn"
                                 class="px-5 rounded-3 bg-primary py-2 border-0">Calculate</button></div>
-                        <h4 class="text-center my-3">Total Expences : <span>5500</span></h4>
-                        <h4 class="text-center">Balance : <span>5500</span></h4>
+                        <h4 class="text-center my-3">Total Expences : <span id="Total-expenses">0</span></h4>
+                        <h4 class="text-center">Balance : <span id="balance">0</span></h4>
                         <p class="text-center">Save: <input class="mx-3 input-background w-25" type="text">% <button
                                 class="px-5 rounded-3 bg-primary py-1 ms-2 border-0">save</button></p>
                         <h4 class="text-center my-3">Saving Amount : <span>5500</span></h4>
@@ -69,6 +69,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <!-- js link -->
+    <script src="/calculation.js"></script>
 </body>
 
 </html>
