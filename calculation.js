@@ -43,16 +43,21 @@ function calculation(number) {
     //saving part
 
     if (number == false) {
-        const saving = (parseFloat(savingRate.value) / 100) * parseFloat(income.value);
-        if (saving > parseFloat(balance.innerText)) {
-            alert('Saving not possible because you have not sufficient balance');
-            savingAmount.innerText = 0;
-            remainingBalance.innerText = balance.innerText;
+        if (parseFloat(savingRate.value) < 0 || isNaN(parseFloat(savingRate.value))) {
+            alert("not valid saving");
         }
         else {
-            savingAmount.innerText = saving;
-            const remaining = parseFloat(balance.innerText) - saving;
-            remainingBalance.innerText = remaining;
+            const saving = (parseFloat(savingRate.value) / 100) * parseFloat(income.value);
+            if (saving > parseFloat(balance.innerText)) {
+                alert('Saving not possible because you have not sufficient balance');
+                savingAmount.innerText = 0;
+                remainingBalance.innerText = balance.innerText;
+            }
+            else {
+                savingAmount.innerText = saving;
+                const remaining = parseFloat(balance.innerText) - saving;
+                remainingBalance.innerText = remaining;
+            }
         }
     }
 
